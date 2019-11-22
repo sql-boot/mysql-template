@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/sql-boot/mysql-template.svg?branch=master)](https://travis-ci.org/sql-boot/mysql-template)
+
 Simple [sql-boot](https://github.com/CrocInc/sql-boot) template for MySQL scripts.
 
 ## How to use
