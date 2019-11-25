@@ -1,12 +1,12 @@
 {
 	"info": {
-		"_postman_id": "cbf5df9e-83cb-44dd-8d14-ce1d6659f327",
+		"_postman_id": "1686c698-0561-424d-8391-0663fa1d3981",
 		"name": "mysql-test",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "Hello world",
+			"name": "Check database health",
 			"event": [
 				{
 					"listen": "test",
@@ -23,12 +23,8 @@
 							"});",
 							"",
 							"",
-							"pm.test(\"Check count\",function () {",
-							"      pm.expect(pm.response.json().length).to.eql(1);",
-							"});",
-							"",
-							"pm.test(\"Check tables\",function () {",
-							"      pm.expect(pm.response.json()[0].value).to.eql(1);",
+							"pm.test(\"Check database health\",function () {",
+							"      pm.expect(pm.response.json()[0].is_alive).to.eql(1);",
 							"});",
 							""
 						],
@@ -40,7 +36,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8007/api/demodb/hello_world_sql_script",
+					"raw": "http://localhost:8007/api/demodb/health.sql",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -49,7 +45,7 @@
 					"path": [
 						"api",
 						"demodb",
-						"hello_world_sql_script"
+						"health.sql"
 					]
 				}
 			},
